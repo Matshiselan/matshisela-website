@@ -111,10 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
-
-
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -279,7 +276,7 @@ window.Quarto = {
 </section>
 <section id="implementation" class="level3">
 <h3 class="anchored" data-anchor-id="implementation">Implementation</h3>
-<div id="eba7c37f" class="cell" data-execution_count="1">
+<div id="463de954" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -371,7 +368,7 @@ window.Quarto = {
 <section id="revenue-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="revenue-analysis">Revenue Analysis</h4>
 <p>Now that we have loaded the data, let’s perform a revenue analysis by aggregating the total revenue by service and payment method.</p>
-<div id="9fdcd452" class="cell" data-execution_count="2">
+<div id="107c7cc3" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the timestamp to datetime format for better handling</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>transaction_data[<span class="st">'timestamp'</span>] <span class="op">=</span> pd.to_datetime(transaction_data[<span class="st">'timestamp'</span>])</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -435,7 +432,7 @@ window.Quarto = {
 </div>
 <p>We have performed a revenue analysis by aggregating the total revenue based on the service and payment method. The results show the total amount collected for each combination of service and payment method.</p>
 <p>This table indicates how much revenue was generated from different services (like BCC, Electricity, Insurance, and Internet) using various payment methods (such as Ecocash, InnBucks, OneMoney, and Visa).</p>
-<div id="fdf1cd21" class="cell" data-execution_count="3">
+<div id="2295ff7c" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extracting month and year from the timestamp for time series analysis</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>transaction_data[<span class="st">'month'</span>] <span class="op">=</span> transaction_data[<span class="st">'timestamp'</span>].dt.to_period(<span class="st">'M'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -533,7 +530,7 @@ window.Quarto = {
 <li>Identifying the months with the highest and lowest revenue can help in understanding customer behavior and planning for future marketing strategies.</li>
 </ul>
 <p>Next, we can visualize this data to better understand the distribution of revenue across different services and payment methods. Let’s create a bar chart to illustrate the total revenue for each service.</p>
-<div id="cbe4cfd6" class="cell" data-execution_count="4">
+<div id="68953b61" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set comprehensive color palette including all payment methods</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>payment_palette <span class="op">=</span> {</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Credit Card'</span>: <span class="st">'#4E79A7'</span>,  <span class="co"># Trustworthy blue</span></span>
@@ -691,7 +688,7 @@ window.Quarto = {
 <span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(rect<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.85</span>, <span class="dv">1</span>])  <span class="co"># Make space for legend</span></span>
 <span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\X1 User\AppData\Local\Temp\ipykernel_9692\2286040920.py:18: FutureWarning:
+<pre><code>C:\Users\X1 User\AppData\Local\Temp\ipykernel_5140\2286040920.py:18: FutureWarning:
 
 
 
@@ -708,7 +705,7 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 </div>
 </div>
 <p>Let’s drill deeper into the monthly revenue analysis by breaking down the revenue by month and service.</p>
-<div id="575fa5cd" class="cell" data-execution_count="5">
+<div id="964a6bb8" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by month and service to calculate total revenue per month</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>monthly_service_revenue <span class="op">=</span> transaction_data.groupby([<span class="st">'month'</span>, <span class="st">'service'</span>])[<span class="st">'amount'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -749,7 +746,7 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 <section id="customer-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="customer-analysis">Customer Analysis</h4>
 <p>To perform a customer value analysis, we will first need to calculate the total revenue generated by each customer.</p>
-<div id="af0ef4be" class="cell" data-execution_count="6">
+<div id="adf61a26" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by user_id to calculate total revenue per customer</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>customer_revenue <span class="op">=</span> transaction_data.groupby(<span class="st">'user_id'</span>)[<span class="st">'amount'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -803,7 +800,7 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 </div>
 </div>
 <p>Now that we have the total revenue generated by each customer, we can analyze customer value by calculating metrics such as average revenue per user (ARPU) and identifying high-value customers.</p>
-<div id="5b756c04" class="cell" data-execution_count="7">
+<div id="0a310023" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the average revenue per user (ARPU)</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ARPU <span class="op">=</span> customer_revenue[<span class="st">'total_revenue'</span>].mean()</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -967,7 +964,7 @@ AOV = \frac{Total Revenue}{Total Number of Orders}
 <p><span class="math display">\[
 Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
 \]</span></p>
-<div id="a58df132" class="cell" data-execution_count="8">
+<div id="6edb8415" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>total_revenue <span class="op">=</span> transaction_data[<span class="st">'amount'</span>].<span class="bu">sum</span>()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>total_orders <span class="op">=</span> transaction_data[<span class="st">'transaction_id'</span>].nunique()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>total_customers <span class="op">=</span> transaction_data[<span class="st">'user_id'</span>].nunique()</span>
@@ -1118,7 +1115,7 @@ Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/nmatshisela\.netlify\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
