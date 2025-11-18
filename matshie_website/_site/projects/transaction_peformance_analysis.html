@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,14 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1de4bf98682b4906a081c7b86f8baf46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9290ad2efec2e05640ed54bbf4865d44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-dark-9290ad2efec2e05640ed54bbf4865d44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9290ad2efec2e05640ed54bbf4865d44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -122,7 +127,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -149,7 +154,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/img/matshie_avatar.png" alt="" class="navbar-logo">
+    <img src="../assets\img\matshie_avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../assets\img\matshie_avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Matshisela</span>
@@ -176,6 +182,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../tutorial.html"> 
 <span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dashboards.html"> 
+<span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog.html"> 
@@ -266,20 +276,20 @@ window.Quarto = {
 </section>
 <section id="implementation" class="level3">
 <h3 class="anchored" data-anchor-id="implementation">Implementation</h3>
-<div id="1fb9cc05" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div id="92cd6900" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># load dataset</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>transaction_data <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/Matshisela/imali_simulation_24/refs/heads/main/data/transaction_data_1_year.csv'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>transaction_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>transaction_data <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/Matshiselan/imali_simulation_24/refs/heads/main/data/transaction_data_1_year.csv'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>transaction_data.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -295,7 +305,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>763e5c31-2c9c-4599-94ba-09711fc97cf2</td>
 <td>372</td>
 <td>38.62</td>
@@ -306,7 +316,7 @@ window.Quarto = {
 <td>Web</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>ac0ff8b7-7811-4281-9b8c-53111a571619</td>
 <td>317</td>
 <td>19.81</td>
@@ -317,7 +327,7 @@ window.Quarto = {
 <td>Web</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>3f14adb2-f144-467f-9397-0d42d950a01d</td>
 <td>3047</td>
 <td>26.78</td>
@@ -328,7 +338,7 @@ window.Quarto = {
 <td>POS</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>a4edfc07-35db-447f-b9a2-ea2f8580745c</td>
 <td>168</td>
 <td>59.75</td>
@@ -339,7 +349,7 @@ window.Quarto = {
 <td>Web</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>ccdc9049-10cd-4f81-8c0e-a58ea2a19ece</td>
 <td>589</td>
 <td>47.97</td>
@@ -358,8 +368,8 @@ window.Quarto = {
 <section id="revenue-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="revenue-analysis">Revenue Analysis</h4>
 <p>Now that we have loaded the data, let’s perform a revenue analysis by aggregating the total revenue by service and payment method.</p>
-<div id="7554590e" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the timestamp to datetime format for better handling</span></span>
+<div id="525a2823" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the timestamp to datetime format for better handling</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>transaction_data[<span class="st">'timestamp'</span>] <span class="op">=</span> pd.to_datetime(transaction_data[<span class="st">'timestamp'</span>])</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only successful transactions</span></span>
@@ -369,12 +379,12 @@ window.Quarto = {
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>revenue_analysis <span class="op">=</span> transaction_data.groupby([<span class="st">'service'</span>, <span class="st">'payment_method'</span>])[<span class="st">'amount'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the revenue analysis results</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>revenue_analysis.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>revenue_analysis.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -385,31 +395,31 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>BCC</td>
 <td>Ecocash</td>
 <td>807118.62</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>BCC</td>
 <td>InnBucks</td>
 <td>134718.85</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>BCC</td>
 <td>OneMoney</td>
 <td>135190.14</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>BCC</td>
 <td>Visa</td>
 <td>271556.92</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>Electricity</td>
 <td>Ecocash</td>
 <td>1157379.43</td>
@@ -422,8 +432,8 @@ window.Quarto = {
 </div>
 <p>We have performed a revenue analysis by aggregating the total revenue based on the service and payment method. The results show the total amount collected for each combination of service and payment method.</p>
 <p>This table indicates how much revenue was generated from different services (like BCC, Electricity, Insurance, and Internet) using various payment methods (such as Ecocash, InnBucks, OneMoney, and Visa).</p>
-<div id="68fd5483" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extracting month and year from the timestamp for time series analysis</span></span>
+<div id="a342a1eb" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extracting month and year from the timestamp for time series analysis</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>transaction_data[<span class="st">'month'</span>] <span class="op">=</span> transaction_data[<span class="st">'timestamp'</span>].dt.to_period(<span class="st">'M'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by month to calculate total revenue per month</span></span>
@@ -504,11 +514,11 @@ window.Quarto = {
 <span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transaction_peformance_analysis_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="transaction_peformance_analysis_files/figure-html/cell-4-output-1.png" width="1334" height="661" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -520,8 +530,8 @@ window.Quarto = {
 <li>Identifying the months with the highest and lowest revenue can help in understanding customer behavior and planning for future marketing strategies.</li>
 </ul>
 <p>Next, we can visualize this data to better understand the distribution of revenue across different services and payment methods. Let’s create a bar chart to illustrate the total revenue for each service.</p>
-<div id="ad3f9bc4" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set comprehensive color palette including all payment methods</span></span>
+<div id="b68ef0ba" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set comprehensive color palette including all payment methods</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>payment_palette <span class="op">=</span> {</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Credit Card'</span>: <span class="st">'#4E79A7'</span>,  <span class="co"># Trustworthy blue</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bank Transfer'</span>: <span class="st">'#F28E2B'</span>,  <span class="co"># Energetic orange</span></span>
@@ -676,25 +686,27 @@ window.Quarto = {
 <span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="co"># Final adjustments</span></span>
 <span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(rect<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.85</span>, <span class="dv">1</span>])  <span class="co"># Make space for legend</span></span>
-<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\X1 User\AppData\Local\Temp\ipykernel_11076\2286040920.py:18: FutureWarning: 
+<pre><code>C:\Users\X1 User\AppData\Local\Temp\ipykernel_14700\2286040920.py:18: FutureWarning:
+
+
 
 The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `err_kws={'linewidth': 0}` instead.
 
-  ax = sns.barplot(</code></pre>
+</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transaction_peformance_analysis_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="transaction_peformance_analysis_files/figure-html/cell-5-output-2.png" width="1284" height="757" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Let’s drill deeper into the monthly revenue analysis by breaking down the revenue by month and service.</p>
-<div id="f8030368" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by month and service to calculate total revenue per month</span></span>
+<div id="3a5423d8" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by month and service to calculate total revenue per month</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>monthly_service_revenue <span class="op">=</span> transaction_data.groupby([<span class="st">'month'</span>, <span class="st">'service'</span>])[<span class="st">'amount'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert month back to datetime for plotting</span></span>
@@ -714,11 +726,11 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transaction_peformance_analysis_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="transaction_peformance_analysis_files/figure-html/cell-6-output-1.png" width="1142" height="566" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -734,20 +746,20 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 <section id="customer-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="customer-analysis">Customer Analysis</h4>
 <p>To perform a customer value analysis, we will first need to calculate the total revenue generated by each customer.</p>
-<div id="d2b3b2fe" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by user_id to calculate total revenue per customer</span></span>
+<div id="204d9bd5" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by user_id to calculate total revenue per customer</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>customer_revenue <span class="op">=</span> transaction_data.groupby(<span class="st">'user_id'</span>)[<span class="st">'amount'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming the columns for clarity</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>customer_revenue.columns <span class="op">=</span> [<span class="st">'user_id'</span>, <span class="st">'total_revenue'</span>]</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the customer revenue analysis</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>customer_revenue.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>customer_revenue.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -757,27 +769,27 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>1</td>
 <td>883.30</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>2</td>
 <td>1052.63</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>3</td>
 <td>719.28</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>4</td>
 <td>790.63</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>5</td>
 <td>733.45</td>
 </tr>
@@ -788,8 +800,8 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 </div>
 </div>
 <p>Now that we have the total revenue generated by each customer, we can analyze customer value by calculating metrics such as average revenue per user (ARPU) and identifying high-value customers.</p>
-<div id="ee32bea2" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the average revenue per user (ARPU)</span></span>
+<div id="17c3fd62" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the average revenue per user (ARPU)</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ARPU <span class="op">=</span> customer_revenue[<span class="st">'total_revenue'</span>].mean()</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify high-value customers (e.g., top 10% of customers by revenue)</span></span>
@@ -922,11 +934,11 @@ The `errwidth` parameter is deprecated. And will be removed in v0.15.0. Pass `er
 <span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Final polish</span></span>
 <span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>sns.despine(left<span class="op">=</span><span class="va">True</span>, bottom<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transaction_peformance_analysis_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="transaction_peformance_analysis_files/figure-html/cell-8-output-1.png" width="1333" height="661" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -952,8 +964,8 @@ AOV = \frac{Total Revenue}{Total Number of Orders}
 <p><span class="math display">\[
 Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
 \]</span></p>
-<div id="7ffc17fe" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>total_revenue <span class="op">=</span> transaction_data[<span class="st">'amount'</span>].<span class="bu">sum</span>()</span>
+<div id="3e2ec134" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>total_revenue <span class="op">=</span> transaction_data[<span class="st">'amount'</span>].<span class="bu">sum</span>()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>total_orders <span class="op">=</span> transaction_data[<span class="st">'transaction_id'</span>].nunique()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>total_customers <span class="op">=</span> transaction_data[<span class="st">'user_id'</span>].nunique()</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -971,12 +983,12 @@ Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying the customer behavior metrics</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>customer_behavior_metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>customer_behavior_metrics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -986,17 +998,17 @@ Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>Average Order Value (AOV)</td>
 <td>22.794344</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>Purchase Frequency</td>
 <td>33.709800</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>Customer Lifetime Value (CLV)</td>
 <td>2305.178286</td>
 </tr>
@@ -1081,13 +1093,14 @@ Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1102,7 +1115,7 @@ Purchase Frequency = \frac{Total Number of Orders}{Total Unique Customers}
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/matshisela\.netlify\.app");
+        var filterRegex = new RegExp("https:\/\/nmatshisela\.netlify\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

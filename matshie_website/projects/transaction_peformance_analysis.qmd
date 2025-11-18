@@ -32,7 +32,7 @@ import seaborn as sns
 import numpy as np
 
 # load dataset
-transaction_data = pd.read_csv('https://raw.githubusercontent.com/Matshisela/imali_simulation_24/refs/heads/main/data/transaction_data_1_year.csv')
+transaction_data = pd.read_csv('https://raw.githubusercontent.com/Matshiselan/imali_simulation_24/refs/heads/main/data/transaction_data_1_year.csv')
 transaction_data.head()
 
 ```

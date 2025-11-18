@@ -7,6 +7,10 @@
     ]
   },
   {
+    "listing": "/dashboards.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": []
   },
@@ -15,9 +19,5 @@
     "items": [
       "/tutorials/thinking_in_python.html"
     ]
-  },
-  {
-    "listing": "/dashboards.html",
-    "items": []
   }
 ]
