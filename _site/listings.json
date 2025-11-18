@@ -1,0 +1,23 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/health_system_bottlenecks.html",
+      "/projects/transaction_peformance_analysis.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": []
+  },
+  {
+    "listing": "/tutorial.html",
+    "items": [
+      "/tutorials/thinking_in_python.html"
+    ]
+  },
+  {
+    "listing": "/dashboards.html",
+    "items": []
+  }
+]

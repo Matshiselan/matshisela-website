@@ -1,0 +1,26 @@
+meta:
+  name: "Matshisela Personal Website"
+  link: https://matshisela.netlify.app/
+  
+color:
+  palette:
+    primary: "#3b4252"   
+    secondary: "#75b5aa"  
+    light-theme: "#FFFFFF"  
+    dark-theme: "#000000"   
+  foreground: "#3b4252"    
+  background: "#FFFFFF" 
+
+typography:
+  fonts:
+    - family: Roboto Mono
+      source: google
+    - family: Roboto Serif
+      source: google
+  base: Roboto Serif
+  headings:
+    family: Roboto Mono
+    weight: 400
+    
+logo: 
+  medium: assets/img/matshie_avatar.png

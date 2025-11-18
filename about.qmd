@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+Experienced Data Scientist | Insight-Driven | Impact-Oriented
+
+I am a seasoned data professional with over five years of experience turning complex data into actionable insights. My expertise spans statistical modeling, machine learning, and advanced analytics leveraging tools like R, Python, and SPSS to solve real-world challenges.
+
+Whether it’s building predictive models to drive decision-making or crafting compelling visual stories from intricate datasets, I bring a deep understanding of the entire data lifecycle—from preprocessing and feature engineering to deployment and communication. My strength lies not just in technical execution, but in bridging the gap between data and impact—translating findings into clear, strategic narratives for both technical and executive audiences.
+
+With a proven record of delivering data solutions that unlock business value, I thrive at the intersection of analytics, innovation, and storytelling.

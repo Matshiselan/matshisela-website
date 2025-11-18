@@ -1,0 +1,368 @@
+---
+title: "Thinking in Python"
+date: 2025-06-03
+description: "A collection of notes and code snippets for learning Python."
+categories: [Python, Programming]
+---
+
+This is a collection of notes and code snippets that I find useful when learning Python. It is not meant to be a comprehensive guide, but rather a collection of tips and tricks that I have found helpful.
+
+It will be broken down into sections, each covering a different aspect of Python programming.
+
+1. Operations 
+
+2. Value Types 
+
+3. Data Structures
+
+4. Control Flow
+
+5. Functions
+
+6. Classes
+
+7. Modules
+
+8. Exceptions
+
+9. File I/O
+
+10. Debugging
+
+11. Performance
+
+
+## Operations
+Operations in Python are the basic mathematical and logical operations that can be performed on values. These include addition, subtraction, multiplication, division, exponentiation, floor division, and modulus.
+
+```{python}
+
+# Addition
+add= 1 + 1
+print(f"We add two numbers like 1 + 1 and get {add}")
+
+# Subtraction
+sub = 2 - 1
+print(f"We subtract two numbers like 2 - 1 and get {sub}")
+
+# Multiplication
+mul = 3 * 4
+print(f"We multiply two numbers like 3 * 4 and get {mul}")
+
+# Division
+div = 10 / 2
+print(f"We divide two numbers like 10 / 2 and get {div}")
+
+# Exponentiation
+exp = 2 ** 3
+print(f"We raise a number to a powerlike 2 ** 3 and get {exp}")
+
+# Floor Division
+floor_div = 7 // 3
+print(f"We perform floor division like 7 // 3 and get {floor_div}")
+
+# Modulus
+mod = 7 % 3
+print(f"We find the modulus of a division like 7 % 3 and get {mod}")
+
+
+
+```
+
+## Value Types
+Value types are the basic data types in Python. They include integers, floats, strings, booleans, and NoneType. Each value type has its own characteristics and use cases.
+
+```{python}
+# Integer
+int_var = 42
+print(f"Integer: {int_var}")
+
+# Float
+float_var = 3.14
+print(f"Float: {float_var}")
+
+# String
+str_var = "Hello, World!"
+print(f"String: {str_var}")
+
+# Boolean
+bool_var = True
+print(f"Boolean: {bool_var}")
+# NoneType
+none_var = None
+print(f"NoneType: {none_var}")        
+```
+
+## Data Structures
+Data structures are used to store and organize data in Python. They include lists, tuples, sets, dictionaries, and strings. Each data structure has its own characteristics and use cases.
+
+```{python}
+# List
+list_var = [1, 2, 3, 4, 5]
+print(f"List: {list_var}")
+
+# Tuple
+tuple_var = (1, 2, 3, 4, 5)
+print(f"Tuple: {tuple_var}")
+
+# Set
+set_var = {1, 2, 3, 4, 5}
+print(f"Set: {set_var}")
+
+# Dictionary
+dict_var = {"one": 1, "two": 2, "three": 3}
+print(f"Dictionary: {dict_var}")
+
+# String
+str_var = "Hello, World!"       
+print(f"String: {str_var}")
+
+```
+
+## Control Flow
+Control flow statements allow you to control the execution of your code based on certain conditions. They include if-else statements, loops (for and while), and more.
+
+```{python}
+# If-Else Statement
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")
+# For Loop
+for i in range(5):      
+    print(f"Iteration {i}")
+# While Loop
+count = 0
+while count < 5:
+    print(f"Count is {count}")
+    count += 1
+```
+
+## Functions
+A function is a reusable block of code that performs a specific task. Functions can take inputs (arguments) and return outputs (results). They help in organizing code, making it more readable and maintainable.
+
+```{python}
+# Function Definition
+def greet(name):    
+    return f"Hello, {name}!"    
+
+# Function Call 
+print(greet("Alice"))
+
+# Function with Default Argument
+def add(a, b=5):
+    return a + b
+
+# Function Call with Default Argument
+print(add(10))  # Uses default value for b
+
+# Function with Variable Number of Arguments
+def sum_all(*args):
+    return sum(args)
+
+# Function Call with Variable Arguments
+print(sum_all(1, 2, 3, 4, 5))
+
+# Lambda Function
+add = lambda x, y: x + y
+print(add(5, 10))
+
+# Function with Keyword Arguments
+def person_info(name, age):
+    return f"{name} is {age} years old."
+print(person_info(name="Bob", age=30))
+
+# Function with Keyword-Only Arguments
+def multiply(*, a, b):
+    return a * b
+print(multiply(a=3, b=4))
+
+# Function with Positional-Only Arguments
+def divide(a, b):
+    return a / b
+print(divide(10, 2))
+
+# Function with Annotations
+def add_numbers(a: int, b: int) -> int:
+    return a + b
+print(add_numbers(5, 10))
+
+# Function with Docstring
+def subtract(a, b):
+    """Subtracts b from a."""
+    return a - b
+print(subtract(10, 5))
+```
+
+## Classes
+A class is a blueprint for creating objects. Objects are instances of classes, and they can have attributes (data) and methods (functions) associated with them. Classes allow you to encapsulate data and behavior together, promoting code reusability and organization.
+
+Defining classes in Python allows you to create your own data types and encapsulate data and behavior together. Here are some examples of class definitions
+
+```{python} 
+# Class Definition
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+# Class Instantiation
+dog = Dog("Buddy", 3)
+print(dog.bark())
+
+
+```
+
+
+```{python}
+# Class Inheritance
+class Puppy(Dog):
+    def wag_tail(self):
+        return f"{self.name} is wagging its tail!"
+# Class Instantiation   
+puppy = Puppy("Charlie", 1)
+print(puppy.bark())
+print(puppy.wag_tail())
+
+# Class with Class Method
+class Cat:
+    species = "Feline"
+
+    def __init__(self, name):
+        self.name = name
+
+    @classmethod
+    def get_species(cls):
+        return cls.species
+# Class Method Call
+print(Cat.get_species())
+# Class with Static Method
+class MathUtils:
+    @staticmethod
+    def add(a, b):
+        return a + b    
+# Static Method Call
+print(MathUtils.add(5, 10))
+```
+
+
+```{python}
+# Class with Properties
+class Person:
+    def __init__(self, name, age):
+        self._name = name
+        self._age = age
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def age(self):
+        return self._age
+
+    @age.setter
+    def age(self, value):
+        if value < 0:
+            raise ValueError("Age cannot be negative")
+        self._age = value
+# Class Instantiation
+person = Person("Alice", 30)
+print(person.name)
+print(person.age)
+person.age = 35
+print(person.age)
+```
+
+## Modules
+Modules are files containing Python code that can be imported and used in other Python programs. They allow
+you to organize your code into reusable components, making it easier to manage and maintain.
+```{python}
+# Importing a Module
+import math
+
+print(math.sqrt(16))
+print(math.pi)  
+# Importing Specific Functions from a Module
+from math import sin, cos
+
+print(sin(math.pi / 2))
+print(cos(0))
+```
+
+## Exceptions
+Exceptions are used to handle errors and exceptional conditions in Python. They allow you to gracefully handle errors and prevent your program from crashing. You can raise exceptions, catch them, and handle them appropriately.
+
+```{python}
+# Exception Handling
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+# Raising an Exception
+try:    
+    raise ValueError("This is a custom error message.")
+except ValueError as e:
+    print(f"Caught an exception: {e}")
+```
+
+## File I/O
+File I/O (Input/Output) allows you to read from and write to files in Python. You can open files, read their contents, write data to them, and close them when done. This is useful for persisting data or reading configuration files.
+```{python}
+# File Writing
+with open("output.txt", "w") as file:
+    file.write("Hello, World!")
+
+# File Reading
+with open("output.txt", "r") as file:
+    content = file.read()
+    print(content)
+```
+
+
+## Debugging
+Debugging is the process of finding and fixing errors in your code. Python provides various tools and
+techniques for debugging, such as using print statements, logging, and using debuggers like `pdb`.
+```{python}
+# Debugging with Print Statements
+def add(a, b):
+    print(f"Adding {a} and {b}")
+    return a + b
+
+result = add(5, 10)
+print(f"Result: {result}")
+# Debugging with Logging
+import logging  
+logging.basicConfig(level=logging.DEBUG)
+
+def add(a, b):
+    logging.debug(f"Adding {a} and {b}")
+    return a + b
+
+result = add(5, 10)
+logging.info(f"Result: {result}")
+```
+
+## Performance
+Performance optimization is crucial for writing efficient Python code. You can use profiling tools to identify bottlenecks in your code and optimize them. Techniques like using built-in functions, avoiding unnecessary computations, and using efficient data structures can help improve performance.
+```{python} 
+# Performance Optimization Example
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+# Using the Function
+n = 10  
+print(f"Fibonacci of {n} is {fibonacci(n)}")
+# Profiling Example
+import cProfile
+def profile_fibonacci(n):
+    cProfile.run(f"fibonacci({n})")
+    print(f"Fibonacci of {n} is {fibonacci(n)}")
+profile_fibonacci(10)
+```
+

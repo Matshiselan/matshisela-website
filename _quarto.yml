@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "Matshisela"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects
+      - href: tutorial.qmd
+        text: Tutorials
+      - href: dashboards.qmd
+        text: Dashboards
+      - href: blog.qmd
+        text: Blog
+
+
+format:
+  html:
+    theme:
+      #- cosmo
+      - darkly
+      - flatly
+    css: styles.css
+    toc: true
+
+
+

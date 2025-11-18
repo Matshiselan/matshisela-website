@@ -1,0 +1,42 @@
+---
+title: "Matshisela"
+image: assets/img/matshie_avatar.png
+toc: false 
+about: 
+  template: solana    
+  image-shape: round
+  image-width: 20em
+  links:
+    - icon: "bi bi-github"
+      text: GitHub
+      href: https://github.com/Matshisela
+    - icon: "bi bi-linkedin"
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ntandoyenkosi-matshisela-8507876a/
+    - icon: "bi bi-twitter-x"
+      text: X
+      href: https://x.com/matshisela/
+    - icon: "bi bi-gitlab"
+      text: Gitlab
+      href: https://gitlab.com/Matshisela/
+    - icon: "bi bi-medium"
+      text: Medium
+      href: https://medium.com/@matshiselantandoyenkosi
+    - icon: "bi bi-envelope-at"
+      text: Email
+      href: mailto:matshiselan@gmail.com
+---
+
+##### **About Me**
+
+::: {#hero-heading}
+
+Welcome to my personal site where I share applied data analysis using R Code and Python Code.
+
+
+##### **Interest**
+
+Data Science • Data Analysis • Data Visualization • Machine learning • Deep Learning 
+
+##### 
+:::
