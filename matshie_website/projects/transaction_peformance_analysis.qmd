@@ -157,8 +157,6 @@ Next, we can visualize this data to better understand the distribution of revenu
 
 ```{python}
 
-
-
 # Set comprehensive color palette including all payment methods
 payment_palette = {
     'Credit Card': '#4E79A7',  # Trustworthy blue
